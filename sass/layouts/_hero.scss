@@ -1,0 +1,215 @@
+.hero {
+  padding-top: 200px;
+  padding-bottom: 200px;
+  max-width: 1600px;
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../img/hero-bg.jpg);
+  background-color: #c4c4c4;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin: 0 auto;
+}
+
+.solutions__title {
+  text-align: center;
+  @include font(44px, 900, 1.36, 0.06em);
+  text-transform: uppercase;
+  color: #ffffff;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  max-width: 696px;
+}
+
+.solutions__btn {
+  padding: 10px 24px;
+  color: #ffffff;
+  background: var(--accent-color);
+  border: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  display: block;
+  margin: 0 auto;
+  min-width: 200px;
+  transition: background-color 950ms var(--timing-function);
+
+  &:hover {
+    background-color: #188ce8;
+  }
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0, 0, 0, 0.2);
+  transition: opacity 250ms var(--timing-function),
+    visibility 3450ms var(--timing-function);
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 528px;
+  height: 581px;
+  background-color: #fff;
+  background: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  transform: translate(-50%, -50%) scale(1) rotate(0);
+  transition: transform 250ms var(--timing-function);
+
+  &__button {
+    position: absolute;
+    @include flex-align-justify;
+    cursor: pointer;
+    top: 8px;
+    right: 8px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    transition: fill 250ms var(--timing-function);
+  }
+
+  &__button:hover {
+    fill: var(--accent-color);
+  }
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0) rotate(-180deg);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.form-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-top: 12px;
+  margin-bottom: 10px;
+
+  & label {
+    margin-bottom: 4px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+    color: #757575;
+  }
+
+  &__text {
+    width: 100%;
+    height: 120px;
+    padding: 14px;
+    font: inherit;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    font-size: 12px;
+    padding: 12px 16px;
+    resize: none;
+  }
+
+  &__text:focus,
+  &__text:hover {
+    border-color: var(--accent-color);
+    outline: transparent;
+  }
+}
+
+.form-checkbox {
+  position: relative;
+  flex-direction: column;
+  margin-top: 12px;
+  margin-bottom: 10px;
+  transition: transform 250ms var(--timing-function),
+    outline 250ms var(--timing-function), border 250ms var(--timing-function);
+}
+
+.checkbox__input:checked + label > span {
+  border: none;
+  background-color: var(--accent-color);
+}
+
+.checkbox__input:checked + label > span svg {
+  fill: white;
+}
+
+.policy__button {
+  min-width: 200px;
+  height: 50px;
+  border-radius: 4px;
+  border: none;
+  overflow: hidden;
+  padding: 10px 52px;
+  margin-left: 12px;
+  background-color: var(--accent-color);
+  color: #ffffff;
+  transition: background-color 250ms var(--timing-function);
+  display: block;
+  margin: 0 auto;
+
+  &:hover,
+  &:focus {
+    background-color: #188ce8;
+  }
+}
+
+.feedback {
+  width: 528px;
+
+  &-title {
+    @include font(20px, 700, 1.15, 0.03em);
+    text-align: center;
+    color: #212121;
+  }
+
+  &__feedback-title {
+    margin-bottom: 12px;
+  }
+}
+
+.policy-label {
+  @include flex-align-justify;
+  @include font($lh:1.17);
+  color: #757575;
+  margin-bottom: 30px;
+
+  &__icon {
+    display: flex;
+    width: 16px;
+    height: 16px;
+    border: 2px solid var(--accent-color);
+    border-radius: 2px;
+    @include flex-align-justify;
+    margin-right: 7px;
+    cursor: pointer;
+  }
+
+  &__icon svg {
+    fill: transparent;
+  }
+}
+
+.policy-label__link {
+  @include font($lh:1.17);
+  color: var(--accent-color);
+  margin-left: 3px;
+
+  & u {
+    text-decoration: underline;
+    color: var(--accent-color);
+  }
+}

@@ -1,0 +1,45 @@
+.clients {
+  display: flex;
+  margin-top: 50px;
+}
+.loyal-customers__title {
+  text-align: center;
+  @include font($fs: 36px, $fw: 700, $lh: 1.16, $ls: 0.03em);
+}
+
+.clients__items {
+  margin-right: 30px;
+
+  &:hover .clients__icons,
+  &:focus .clients__icons {
+    fill: var(--accent-color);
+    transition: 250ms var(--timing-function);
+  }
+
+  &:focus .clients__icons {
+    fill: var(--accent-color);
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.clients__link {
+  width: 170px;
+  height: 92px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  @include flex-align-justify;
+  transition: border-color 250ms var(--timing-function);
+
+  &:hover {
+    outline: 1px solid var(--accent-color);
+    border: 1px solid transparent;
+  }
+}
+
+.clients__icons {
+  fill: #afb1b8;
+  transition: fill 250ms var(--timing-function);
+}

@@ -1,0 +1,32 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--main-font);
+  color: #212121;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.list {
+  @include reset-list;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto
+}
+
+section {
+  @include section-paddings;
+}
