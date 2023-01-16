@@ -3,8 +3,9 @@
     padding: 0 15px;
     margin: 0 auto;
     
-    @media screen and (min-width: 468px) {
-      width: 468px; //448=418+15+15
+
+    @media screen and (min-width: 480px) {
+      width: 480px; 
     }
 
     @media screen and (min-width: 768px) {

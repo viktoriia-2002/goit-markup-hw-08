@@ -1,27 +1,66 @@
 .hero {
-  padding-top: 200px;
-  padding-bottom: 200px;
+  // padding-top: 200px;
+  // padding-bottom: 200px;
+  padding: 118px 60px;
   max-width: 1600px;
   background-image: linear-gradient(
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
-    url(../img/hero-bg.jpg);
+    url(../img/hero-bg-mob.jpg);
   background-color: #c4c4c4;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   margin: 0 auto;
+
+  @media screen and (min-width: 768px) {
+    padding: 118px 204px;
+    background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../img/hero-bg-tab.jpg);
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../img/hero-bg-desk.jpg);
+  }
+}
+
+.solutions {
+  @media screen and (min-width: 480px) {
+    .container {
+      max-width: 360px;
+    }
+  }
 }
 
 .solutions__title {
   text-align: center;
-  @include font(44px, 900, 1.36, 0.06em);
+  @include font(26px, 900, 1.62, 0.06em);
   text-transform: uppercase;
   color: #ffffff;
   margin: 0 auto;
   margin-bottom: 30px;
-  max-width: 696px;
+  max-width: 360px;
+  // max-width: 696px;
+
+  @media screen and (min-width: 1200px) {
+    text-align: center;
+    @include font(44px, 900, 1.36, 0.06em);
+    text-transform: uppercase;
+    color: #ffffff;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    max-width: 696px;
+  }
 }
 
 .solutions__btn {
@@ -183,7 +222,7 @@
 
 .policy-label {
   @include flex-align-justify;
-  @include font($lh:1.17);
+  @include font($lh: 1.17);
   color: #757575;
   margin-bottom: 30px;
 
@@ -204,7 +243,7 @@
 }
 
 .policy-label__link {
-  @include font($lh:1.17);
+  @include font($lh: 1.17);
   color: var(--accent-color);
   margin-left: 3px;
 

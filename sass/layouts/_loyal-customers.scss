@@ -1,14 +1,59 @@
+.loyal-customers {
+  padding: 60px 15px;
+
+  @include tablet {
+    @media screen and (min-width: 780) {
+      padding: 60px 15px;
+    }
+  }
+
+  @include desktop {
+    @media screen and (min-width: 1200px) {
+      padding: 94px 0px;
+    }
+  }
+}
+
 .clients {
   display: flex;
-  margin-top: 50px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+
+  @include tel {
+    @media screen and (min-width: 1200px) {
+      flex-wrap: wrap;
+      width: calc((100% - 60px)) / 2;
+    }
+  }
+
+  @include desktop {
+    @media screen and (min-width: 1200px) {
+      margin-top: 50px;
+    }
+  }
+
+  @include desktop {
+    @media screen and (min-width: 1200px) {
+      margin-top: 50px;
+    }
+  }
 }
+
 .loyal-customers__title {
   text-align: center;
-  @include font($fs: 36px, $fw: 700, $lh: 1.16, $ls: 0.03em);
+  @include font($fs: 28px, $fw: 700, $lh: 1.17, $ls: 0.03em);
+  color: var(--primary-header-color);
+
+  @include desktop {
+    @media screen and (min-width: 1200px) {
+      @include font($fs: 36px, $fw: 700, $lh: 1.16, $ls: 0.03em);
+    }
+  }
 }
 
 .clients__items {
   margin-right: 30px;
+  margin-bottom: 30px;
 
   &:hover .clients__icons,
   &:focus .clients__icons {
@@ -22,6 +67,16 @@
 
   &:last-child {
     margin-right: 0;
+  }
+
+  &:nth-last-child(-n + 2) {
+    margin-bottom: 0;
+  }
+
+  @include desktop {
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 0;
+    }
   }
 }
 

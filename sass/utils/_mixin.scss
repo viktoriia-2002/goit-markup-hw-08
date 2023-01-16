@@ -25,9 +25,27 @@
   padding-bottom: 94px;
 }
 
-@mixin font ($fs: 14px, $fw: 400, $lh: 1.14, $ls: 0.03em) {
+@mixin font($fs: 14px, $fw: 400, $lh: 1.14, $ls: 0.03em) {
   font-size: $fs;
   font-weight: $fw;
   line-height: $lh;
   letter-spacing: $ls;
+}
+
+@mixin tel {
+  @media screen and (min-width: 480px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: 1200px) {
+    @content;
+  }
 }
