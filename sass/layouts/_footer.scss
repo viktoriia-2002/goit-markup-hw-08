@@ -70,13 +70,16 @@ footer {
   @include desktop {
     @media screen and (min-width: 1200px) {
       @include font($fs: 14px, $fw: 400, $lh: 1.17, $ls: 0.03em);
-    } 
+    }
   }
-  
 }
 
 .footer-main {
   text-align: center;
+  // display: flex;
+  // flex-wrap: wrap;
+  // justify-content: space-around;
+
   &__span {
     font-family: "Raleway";
     color: white;
@@ -91,17 +94,33 @@ footer {
     @include desktop {
       @media screen and (min-width: 1200px) {
         @include font(26px, 700, 1.19, 0.03em);
-      } 
+      }
     }
   }
+
+  @include tablet {
+    @media screen and (min-width: 768px) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+  };
 
   @include desktop {
     @media screen and (min-width: 1200px) {
       display: flex;
-      align-items: center;
-      text-align: start;
-    } 
+      align-items: baseline;
+      justify-content: space-between;
+      // text-align: start;
+    }
   }
 }
 
-
+.footer-contacts {
+  text-align: center;
+  @include desktop {
+    @media screen and (min-width: 1200px) {
+      text-align: start;
+    }
+  }
+}
