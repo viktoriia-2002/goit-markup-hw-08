@@ -3,92 +3,260 @@ header {
 }
 
 .main-nav {
-  @include flex-align;
+  // @include flex-align;
 
-  &__logo {
-    @include font (26px, 700, 1.19, 0.03em);
-    font-family: var(--secondary-font);
-    color: var(--accent-color);
-  }
+  // &__logo {
+  //   @include font (26px, 700, 1.19, 0.03em);
+  //   font-family: var(--secondary-font);
+  //   color: var(--accent-color);
+  // }
 
   &__span {
     font-family: var(--secondary-font);
     color: var(--primary-header-color);
     margin-left: -7px;
   }
+
+  // @include tablet {
+  //   @media screen and (min-width: 768px) {
+  //     @include flex-align;
+  //     &__logo {
+  //       @include font (26px, 700, 1.19, 0.03em);
+  //       font-family: var(--secondary-font);
+  //       color: var(--accent-color);
+  //   }
+  // }
+  // }
+  @include tablet {
+    @media screen and (min-width: 768px) {
+      @include flex-align;
+
+      &__logo {
+        @include font(24px, 700, 1.16, 0.03em);
+        font-family: var(--secondary-font);
+        color: var(--accent-color);
+      }
+    }
+  }
+
+  @include desktop {
+    @media screen and (min-width: 1200px) {
+      @include flex-align;
+      &__logo {
+        @include font(26px, 700, 1.19, 0.03em);
+        font-family: var(--secondary-font);
+        color: var(--accent-color);
+      }
+    }
+  }
 }
 
 .navigation__list {
-  display: flex;
-  margin-left: 93px;
+  // display: flex;
+  // margin-left: 93px;
 
   & .item {
     position: relative;
+
+    @mixin tablet {
+      @media screen and (min-width: 768px) {
+        position: relative;
+      }
+    }
+
+    @include desktop {
+      @media screen and (min-width: 1200px) {
+        position: relative;
+      }
+    }
   }
 
   & > li {
-    margin-left: 40px;
+    // margin-left: 40px;
+
+    @include tablet {
+      @media screen and (min-width: 768px) {
+        margin-left: 40px;
+      }
+    }
+    @include desktop {
+      @media screen and (min-width: 1200px) {
+        margin-left: 40px;
+      }
+    }
+  }
+
+  @include tablet {
+    @media screen and (min-width: 768px) {
+      display: flex;
+      margin-left: 88px;
+    }
+  }
+
+  @include desktop {
+    @media screen and (min-width: 1200px) {
+      display: flex;
+      margin-left: 93px;
+    }
   }
 }
 
 .navigation__link {
-  display: block;
-  position: relative;
-  padding-top: 32px;
-  padding-bottom: 32px;
-  @include font($fw: 500, $ls: 0.02em);
-  color: var(--primary-header-color);
-  transition: color 250ms var(--timing-function),
-    transition 250ms var(--timing-function);
+  // display: block;
+  // position: relative;
+  // padding-top: 32px;
+  // padding-bottom: 32px;
+  // @include font($fw: 500, $ls: 0.02em);
+  // color: var(--primary-header-color);
+  // transition: color 250ms var(--timing-function),
+  //   transition 250ms var(--timing-function);
 
   &:hover,
   &:focus {
     color: var(--accent-color);
   }
+
+  @include tablet {
+    @media screen and (min-width: 768px) {
+      display: block;
+      position: relative;
+      padding-top: 32px;
+      padding-bottom: 32px;
+      @include font($fw: 500, $ls: 0.02em);
+      color: var(--primary-header-color);
+      transition: color 250ms var(--timing-function),
+        transition 250ms var(--timing-function);
+    }
+  }
+
+  @include desktop {
+    @media screen and (min-width: 1200px) {
+      display: block;
+      position: relative;
+      padding-top: 32px;
+      padding-bottom: 32px;
+      @include font($fw: 500, $ls: 0.02em);
+      color: var(--primary-header-color);
+      transition: color 250ms var(--timing-function),
+        transition 250ms var(--timing-function);
+    }
+  }
 }
 
 .navigation__item .current {
-  color: var(--accent-color);
+  // color: var(--accent-color);
+
+  @include tablet {
+    @media screen and (min-width: 768px) {
+      color: var(--accent-color);
+    }
+  }
+
+  @include desktop {
+    @media screen and (min-width: 1200px) {
+      color: var(--accent-color);
+    }
+  }
 }
 
-
 .navigation__link.current::after {
-  content: " ";
-  display: block;
-  position: absolute;
-  background: var(--accent-color);
-  border-radius: 2px;
-  height: 4px;
-  width: 100%;
-  transform: translateY(30px);
-  opacity: 1;
-  transition: opacity 250ms var(--timing-function);
+  // content: " ";
+  // display: block;
+  // position: absolute;
+  // background: var(--accent-color);
+  // border-radius: 2px;
+  // height: 4px;
+  // width: 100%;
+  // transform: translateY(30px);
+  // opacity: 1;
+  // transition: opacity 250ms var(--timing-function);
 
-  &.current:hover::after {
-    opacity: 1;
+  // &.current:hover::after {
+  //   opacity: 1;
+  // }
+
+  @include tablet {
+    @media screen and (min-width: 768px) {
+      content: '';
+      display: block;
+      position: absolute;
+      background: var(--accent-color);
+      border-radius: 2px;
+      height: 4px;
+      width: 100%;
+      transform: translateY(30px);
+      opacity: 1;
+      transition: opacity 250ms var(--timing-function);
+    }
+
+    &.current:hover::after {
+      opacity: 1;
+    }
   }
+
+  @include desktop {
+    @media screen and (min-width: 1200px) {
+      content: '';
+      display: block;
+      position: absolute;
+      background: var(--accent-color);
+      border-radius: 2px;
+      height: 4px;
+      width: 100%;
+      transform: translateY(30px);
+      opacity: 1;
+      transition: opacity 250ms var(--timing-function);
+    }
+
+    &.current:hover::after {
+      opacity: 1;
+    }
+  }
+
 }
 
 .connections-list {
-  display: flex;
-  margin-left: auto;
+  // display: flex;
+  // margin-left: auto;
 
-  & > li {
-    margin-left: 40px;
+  // & > li {
+  //   margin-left: 40px;
+  // }
+
+  @include desktop {
+    @media screen and (min-width: 1200px) {
+      display: flex;
+      margin-left: auto;
+
+      & > li {
+        margin-left: 40px;
+      }
+    }
   }
 }
 
-.navigation__item:first-child{
-  margin-left: 0px;
+.navigation__item:first-child {
+  // margin-left: 0px;
+  @include tablet {
+    @media screen and (min-width: 768px) {
+      margin-left: 0px;
+    }
+  }
+
+  @include desktop {
+    @media screen and (min-width: 1200px) {
+      margin-left: 0px;
+    }
+  }
 }
 
 .connections-list__email,
 .connections-list__tel {
-  @include flex-align-justify;
-  font-family: var(--main-font);
-  @include font(14px, 500, 1.14, 0.02em);
-  color: var(--secondary-color);
-  transition: color 250ms var(--timing-function);
+  // @include flex-align-justify;
+  // font-family: var(--main-font);
+  // @include font(14px, 500, 1.14, 0.02em);
+  // color: var(--secondary-color);
+  // transition: color 250ms var(--timing-function);
 
   &:focus,
   &:hover {
@@ -98,17 +266,66 @@ header {
   &:focus,
   &:hover {
     color: var(--accent-color);
+  }
+
+  @include tablet {
+    @media screen and (min-width: 768px) {
+      font-family: var(--main-font);
+      @include font(12px, 500, 1.17, 0.02em);
+      color: var(--secondary-color);
+      transition: color 250ms var(--timing-function);
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  @include desktop {
+    @media screen and (min-width: 1200px) {
+      @include flex-align-justify;
+      font-family: var(--main-font);
+      @include font(14px, 500, 1.14, 0.02em);
+      color: var(--secondary-color);
+      transition: color 250ms var(--timing-function);
+    }
   }
 }
 
 .connections-list__email:focus,
 .connections-list__email:hover {
-  color: var(--accent-color);
+  // color: var(--accent-color);
+
+  @include tablet {
+    @media screen and (min-width: 768px) {
+      color: var(--accent-color);
+    }
+  }
+
+  @include desktop {
+    @media screen and (min-width: 1200px) {
+      color: var(--accent-color);
+    }
+  }
 }
 
 .connections-list__icon,
 .header-phone-icon {
-  margin-right: 10px;
-  fill: currentColor;
-  display: inline-flex;
+  // margin-right: 10px;
+  // fill: currentColor;
+  // display: inline-flex;
+
+  @include tablet {
+    @media screen and (min-width: 768px) {
+      fill: currentColor;
+      margin-right: 8px;
+
+    }
+  }
+
+  @include desktop {
+    @media screen and (min-width: 1200px) {
+      margin-right: 10px;
+      fill: currentColor;
+      display: inline-flex;
+    }
+  }
 }

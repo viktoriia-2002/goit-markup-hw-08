@@ -18,20 +18,20 @@
     // padding: 118px 204px;
     padding: 118px 0;
     background-image: linear-gradient(
-      rgba(47, 48, 58, 0.4),
-      rgba(47, 48, 58, 0.4)
-    ),
-    url(../img/hero-bg-tab.jpg);
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../img/hero-bg-tab.jpg);
   }
 
   @media screen and (min-width: 1200px) {
     padding-top: 200px;
     padding-bottom: 200px;
     background-image: linear-gradient(
-      rgba(47, 48, 58, 0.4),
-      rgba(47, 48, 58, 0.4)
-    ),
-    url(../img/hero-bg-desk.jpg);
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../img/hero-bg-desk.jpg);
   }
 }
 
@@ -91,13 +91,13 @@
   transition: opacity 250ms var(--timing-function),
     visibility 3450ms var(--timing-function);
 }
-
+// MODAL MODAL
 .modal {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 528px;
-  height: 581px;
+  width: 450px;
+  height: 609px;
   background-color: #fff;
   background: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -123,15 +123,109 @@
   &__button:hover {
     fill: var(--accent-color);
   }
+  @include tablet {
+    @media screen and (min-width: 768px) {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 450px;
+      height: 609px;
+      background-color: #fff;
+      background: #ffffff;
+      box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+        0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+      border-radius: 4px;
+      transform: translate(-50%, -50%) scale(1) rotate(0);
+      transition: transform 250ms var(--timing-function);
+    }
+    &__button {
+      position: absolute;
+      @include flex-align-justify;
+      cursor: pointer;
+      top: 8px;
+      right: 8px;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      background: #ffffff;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      transition: fill 250ms var(--timing-function);
+    }
+
+    &__button:hover {
+      fill: var(--accent-color);
+    }
+  }
+
+  @include desktop {
+    @media screen and (min-width: 1200px) {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 528px;
+      height: 581px;
+      background-color: #fff;
+      background: #ffffff;
+      box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+        0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+      border-radius: 4px;
+      transform: translate(-50%, -50%) scale(1) rotate(0);
+      transition: transform 250ms var(--timing-function);
+    }
+
+    &__button {
+      position: absolute;
+      @include flex-align-justify;
+      cursor: pointer;
+      top: 8px;
+      right: 8px;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      background: #ffffff;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      transition: fill 250ms var(--timing-function);
+    }
+
+    &__button:hover {
+      fill: var(--accent-color);
+    }
+  }
 }
 
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(0) rotate(-180deg);
+
+  @include tablet {
+    @media screen and (min-width: 768px) {
+      transform: translate(-50%, -50%) scale(0) rotate(-180deg);
+    }
+  }
+
+  @include desktop {
+    @media screen and (min-width: 1200px) {
+      transform: translate(-50%, -50%) scale(0) rotate(-180deg);
+    }
+  }
 }
 
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
+
+  @include tablet {
+    @media screen and (min-width: 768px) {
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+
+  @include desktop {
+    @media screen and (min-width: 1200px) {
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
 }
 
 .form-item {
@@ -167,6 +261,80 @@
     border-color: var(--accent-color);
     outline: transparent;
   }
+
+  @include tablet {
+    @media screen and (min-width: 768px) {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      margin-top: 12px;
+      margin-bottom: 10px;
+    }
+
+    & label {
+      margin-bottom: 4px;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 1.16;
+      letter-spacing: 0.01em;
+      color: #757575;
+    }
+
+    &__text {
+      width: 100%;
+      height: 120px;
+      padding: 14px;
+      font: inherit;
+      border: 1px solid rgba(33, 33, 33, 0.2);
+      border-radius: 4px;
+      font-size: 12px;
+      padding: 12px 16px;
+      resize: none;
+    }
+
+    &__text:focus,
+    &__text:hover {
+      border-color: var(--accent-color);
+      outline: transparent;
+    }
+  }
+
+  @include desktop {
+    @media screen and (min-width: 1200px) {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      margin-top: 12px;
+      margin-bottom: 10px;
+    }
+
+    & label {
+      margin-bottom: 4px;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 1.16;
+      letter-spacing: 0.01em;
+      color: #757575;
+    }
+
+    &__text {
+      width: 100%;
+      height: 120px;
+      padding: 14px;
+      font: inherit;
+      border: 1px solid rgba(33, 33, 33, 0.2);
+      border-radius: 4px;
+      font-size: 12px;
+      padding: 12px 16px;
+      resize: none;
+    }
+
+    &__text:focus,
+    &__text:hover {
+      border-color: var(--accent-color);
+      outline: transparent;
+    }
+  }
 }
 
 .form-checkbox {
@@ -176,11 +344,49 @@
   margin-bottom: 10px;
   transition: transform 250ms var(--timing-function),
     outline 250ms var(--timing-function), border 250ms var(--timing-function);
+
+  @include tablet {
+    @media screen and (min-width: 768px) {
+      position: relative;
+      flex-direction: column;
+      margin-top: 12px;
+      margin-bottom: 10px;
+      transition: transform 250ms var(--timing-function),
+        outline 250ms var(--timing-function),
+        border 250ms var(--timing-function);
+    }
+  }
+
+  @include desktop {
+    @media screen and (min-width: 1200px) {
+      position: relative;
+      flex-direction: column;
+      margin-top: 12px;
+      margin-bottom: 10px;
+      transition: transform 250ms var(--timing-function),
+        outline 250ms var(--timing-function),
+        border 250ms var(--timing-function);
+    }
+  }
 }
 
 .checkbox__input:checked + label > span {
   border: none;
   background-color: var(--accent-color);
+
+  @include tablet {
+    @media screen and (min-width: 768px) {
+      border: none;
+      background-color: var(--accent-color);
+    }
+  }
+
+  @include desktop {
+    @media screen and (min-width: 1200px) {
+      border: none;
+      background-color: var(--accent-color);
+    }
+  }
 }
 
 .checkbox__input:checked + label > span svg {
@@ -208,7 +414,7 @@
 }
 
 .feedback {
-  width: 528px;
+  width: 450px;
 
   &-title {
     @include font(20px, 700, 1.15, 0.03em);
@@ -219,13 +425,19 @@
   &__feedback-title {
     margin-bottom: 12px;
   }
+
+  @include desktop {
+    @media screen and (min-width: 1200px) {
+      width: 528px;
+    }
+  }
 }
 
 .policy-label {
   @include flex-align-justify;
-  @include font($lh: 1.17);
+  @include font($fs: 12px, $fw: 400, $lh: 1.17, $ls: 0.03em);
   color: #757575;
-  margin-bottom: 30px;
+  margin-bottom: 31px;
 
   &__icon {
     display: flex;
@@ -241,6 +453,15 @@
   &__icon svg {
     fill: transparent;
   }
+
+  @include desktop {
+    @media screen and (min-width: 1200px) {
+      @include flex-align-justify;
+      @include font($lh: 1.17);
+      color: #757575;
+      margin-bottom: 30px;
+    }
+  }
 }
 
 .policy-label__link {
@@ -253,3 +474,4 @@
     color: var(--accent-color);
   }
 }
+
