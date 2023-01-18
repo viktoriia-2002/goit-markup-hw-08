@@ -186,13 +186,19 @@
         <h2 class="our-business__title pre-title">Чим ми займаємося</h2>
         <ul class="card-list list">
           <li class="card-list__items">
-            <img src="./img/what-are-we-doing-img-1.jpg" alt="програміст працює за стoлом" width="370" height="294" />
+            <img 
+            srcset="./img/what-are-we-doing-img-1.jpg 1x,
+            ./img/what-are-we-doing-img-1-2x.jpg 2x,"
+            src="./img/what-are-we-doing-img-1.jpg" alt="програміст працює за стoлом" width="370" height="294" />
             <div class="desq-label">
               <p class="desq-label__text">Десктопні додатки</p>
             </div>
           </li>
           <li class="card-list__items">
-            <img src="./img/what-are-we-doing-img-2.jpg"
+            <img 
+            srcset="./img/what-are-we-doing-img-2.jpg 1x,
+            ./img/what-are-we-doing-img-2-2x.jpg 2x,"
+            src="./img/what-are-we-doing-img-2.jpg"
               alt="веб-інтерфейс дизайнери розробляють додаток смартфони команда творціd працює інтерфейс мобільні телефони"
               width="370" height="294" />
             <div class="desq-label">
@@ -200,7 +206,10 @@
             </div>
           </li>
           <li class="card-list__items">
-            <img src="./img/what-are-we-doing-img-3.jpg"
+            <img 
+            srcset="./img/what-are-we-doing-img-3.jpg 1x,
+            ./img/what-are-we-doing-img-3-2x.jpg 2x,"
+            src="./img/what-are-we-doing-img-3.jpg"
               alt="креативний художник-веб-дизайн з робочим колір графічним планшетом" width="370" height="294" />
             <div class="desq-label">
               <p class="desq-label__text">
@@ -218,17 +227,22 @@
         <ul class="staff-list list">
           <li class="staff-list__item">
             <!-- test -->
-            <img src="./img/team-member-1.jpg" alt="Ігор Дем'яненко Product Designer" width="270" height="260" />
 
             <picture>
-             <source srcset="./img/team-member-1.jpg"
+             <source srcset="./img/team-member-1-desk-1x.jpg 1x,
+             ./img/team-member-1-desk-2x.jpg 2x"
              media ="(min-width:1200px)">
-            <source srcset="./img/team-member-1.jpg"
+            <source srcset="./img/team-member-1-tab-1x.jpg 1x,
+            ./img/team-member-1-tab-2x.jpg 2x"
              media ="(min-width:768px)">
-             <source srcset="./img/team-member-1.jpg"
+             <source srcset="./img/team-member-1-mob-1x.jpg 1x,
+             ./img/team-member-1-mob-2x.jpg 2x"
              media ="(min-width:480px)">
+             <img 
+            srcset="./img/team-member-1-mob-1x.jpg 1x,
+            ./img/team-member-1-mob-2x.jpg 2x"
+            src="./img/team-member-1-mob-1x.jpg"             alt="Ігор Дем'яненко Product Designer" width="270" height="260" />
             </picture>
-
 
             <!-- test -->
             <div class="staff-list__desq">
@@ -264,11 +278,24 @@
                   </a>
                 </li>
               </ul>
-              <!-- social-links -->
             </div>
           </li>
           <li class="staff-list__item">
-            <img src="./img/team-member-2.jpg" alt="Ольга Рєпіна Frontend Developer" width="270" height="260" />
+            <picture>
+              <source srcset="./img/team-member-2-desk-1x.jpg 1x,
+              ./img/team-member-2-desk-2x.jpg 2x"
+              media ="(min-width:1200px)">
+             <source srcset="./img/team-member-2-tab-1x.jpg 1x,
+             ./img/team-member-2-tab-2x.jpg 2x"
+              media ="(min-width:768px)">
+              <source srcset="./img/team-member-2-mob-1x.jpg 1x,
+              ./img/team-member-2-mob-2x.jpg 2x"
+              media ="(min-width:480px)">
+              <img 
+              srcset="./img/team-member-2-mob-1x.jpg 1x,
+              ./img/team-member-2-mob-2x.jpg 2x"
+              src="./img/team-member-2-mob-1x.jpg" alt="Ольга Рєпіна Frontend Developer" width="270" height="260" />
+             </picture>
             <div class="staff-list__desq">
               <h3 class="staff-list__subtitle">Ольга Рєпіна</h3>
               <p class="staff-list__text">Frontend Developer</p>
@@ -305,7 +332,22 @@
             </div>
           </li>
           <li class="staff-list__item">
-            <img src="./img/team-member-3.jpg" alt="Микола Тарасов Marketing" width="270" height="260" />
+    
+            <picture>
+              <source srcset="./img/team-member-3-desk-1x.jpg 1x,
+              ./img/team-member-3-desk-2x.jpg 2x"
+              media ="(min-width:1200px)">
+             <source srcset="./img/team-member-3-tab-1x.jpg 1x,
+             ./img/team-member-3-tab-2x.jpg 2x"
+              media ="(min-width:768px)">
+              <source srcset="./img/team-member-3-mob-1x.jpg 1x,
+              ./img/team-member-3-mob-2x.jpg 2x"
+              media ="(min-width:480px)">
+              <img 
+              srcset="./img/team-member-3-mob-1x.jpg 1x,
+              ./img/team-member-3-mob-2x.jpg 2x"
+              src="./img/team-member-3.jpg" alt="Микола Тарасов Marketing" width="270" height="260" />
+             </picture>
             <div class="staff-list__desq">
               <h3 class="staff-list__subtitle">Микола Тарасов</h3>
               <p class="staff-list__text">Marketing</p>
@@ -342,7 +384,22 @@
             </div>
           </li>
           <li class="staff-list__item">
-            <img src="./img/team-member-4.jpg" alt="Михайло Єрмаков UI Designer" width="270" height="260" />
+
+            <picture>
+              <source srcset="./img/team-member-4-desk-1x.jpg 1x,
+              ./img/team-member-4-desk-2x.jpg 2x"
+              media ="(min-width:1200px)">
+             <source srcset="./img/team-member-4-tab-1x.jpg 1x,
+             ./img/team-member-4-tab-2x.jpg 2x"
+              media ="(min-width:768px)">
+              <source srcset="./img/team-member-4-mob-1x.jpg 1x,
+              ./img/team-member-4-mob-2x.jpg 2x"
+              media ="(min-width:480px)">
+              <img 
+             srcset="./img/team-member-4-mob-1x.jpg 1x,
+             ./img/team-member-4-mob-2x.jpg 2x"
+             src="./img/team-member-1-mob-1x.jpg"             alt="Ігор Дем'яненко Product Designer" width="270" height="260" />
+             </picture>
             <div class="staff-list__desq">
               <h3 class="staff-list__subtitle">Михайло Єрмаков</h3>
               <p class="staff-list__text">UI Designer</p>
