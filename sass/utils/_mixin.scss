@@ -49,3 +49,25 @@
     @content;
   }
 }
+
+@mixin retina {
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    @content;
+  }
+}
+
+/* <picture>
+  <source srcset="" media="" sizes="" type="" />
+  <source srcset="" media="" sizes="" type="" />
+  <img src="" alt="" />
+</picture> */
+
+// @media (min-device-pixel-ratio: 2),
+//   (min-resolution: 192dpi),
+//   (min-resolution: 2dppx) {
+//   .box {
+//     background-image: url('photo@2x.png');
+//   }
+// }
