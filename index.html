@@ -19,7 +19,7 @@
 <!-- | -->
 
 <body>
- <header class="header">
+  <header class="header">
     <div class="container">
       <div class="main-nav">
         <a href="" class="main-nav__logo link">Web <span class="main-nav__span">Studio</span></a>
@@ -40,24 +40,70 @@
         <ul class="connections-list list">
           <li>
             <a href="mailto:info@devstudio.com" class="connections-list__email link">
-              <svg width="20" height="20" class="connections-list__icon">
+              <svg width="14" height="10" class="connections-list__icon mail-icon">
                 <use href="./img/icons-icomoon.svg#icon-envelope"></use>
               </svg>info@devstudio.com</a>
           </li>
           <li>
             <a href="tel:+380961111111" class="connections-list__tel link">
-              <svg width="20" height="20" class="connections-list__icon">
+              <svg width="10" height="14" class="connections-list__icon phone-icon">
                 <use href="./img/icons-icomoon.svg#icon-phone-icon"></use>
               </svg>+38 096 111 11 11</a>
           </li>
         </ul>
+        <!-- Mob menu -->
       </div>
-
+      <button type="button" class="menu-open">M</button>
     </div>
-  </header> 
+    <div class="mobile-menu">
+      <div class="container">
+        <div class="menu-content">
+          <button type="button" class="menu-close">X
+            <svg class="" width="18.67" height="18.67">
+              <use href="./img/close_40px.svg"></use>
+            </svg>
+          </button>
+          <nav class="mob-navigation">
+            <ul class="mob-navigation__list list">
+              <li class="mob-navigation__item">
+                <a class="mob-navigation__link link current" href="">Студія</a>
+              </li>
+              <li class="mob-navigation__item">
+                <a class="mob-navigation__link link" href="./portfolio.index.html">Портфоліо</a>
+              </li>
+              <li class="mob-navigation__item">
+                <a class="mob-navigation__link link" href="">Контакти</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="mob-connections">
+            <ul class="mob-connections-list list">
+              <li class="mob-connections-list__item">
+                <a href="mailto:info@devstudio.com" class="mob-connections-list__email link">
+                  info@devstudio.com</a>
+              </li>
+              <li class="mob-connections-list__item">
+                <a href="tel:+380961111111" class="mob-connections-list__tel link">
+                  +38 096 111 11 11</a>
+              </li>
+            </ul>
+          </div>
+          <div class="mob-social-link">
+            <ul class="mob-social-link-list list">
+              <li class="mob-social-link__item"><a href="" class="mob-social-link__link link">Instagram</a></li>
+              <li class="mob-social-link__item"><a href="" class="mob-social-link__link link">Twitter</a></li>
+              <li class="mob-social-link__item"><a href="" class="mob-social-link__link link">Facebook</a></li>
+              <li class="mob-social-link__item"><a href="" class="mob-social-link__link link">LinkedIn</a></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </header>
 
   <main>
-     <section class="hero">
+    <section class="hero">
       <div class="container">
         <div class="solutions">
           <h1 class="solutions__title">Ефективні рішення для вашого бізнесу</h1>
@@ -133,10 +179,10 @@
           </div>
         </div>
       </div>
-    </section> 
+    </section>
 
 
-<section class="characteristics">
+    <section class="characteristics">
       <div class="container">
         <ul class="characteristics__list list">
           <li class="characteristics__item">
@@ -180,25 +226,22 @@
           </li>
         </ul>
       </div>
-    </section> 
+    </section>
     <section class="section our-business">
       <div class="container">
         <h2 class="our-business__title pre-title">Чим ми займаємося</h2>
         <ul class="card-list list">
           <li class="card-list__items">
-            <img 
-            srcset="./img/what-are-we-doing-img-1.jpg 1x,
-            ./img/what-are-we-doing-img-1-2x.jpg 2x,"
-            src="./img/what-are-we-doing-img-1.jpg" alt="програміст працює за стoлом" width="370" height="294" />
+            <img srcset="./img/what-are-we-doing-img-1.jpg 1x,
+            ./img/what-are-we-doing-img-1-2x.jpg 2x," src="./img/what-are-we-doing-img-1.jpg"
+              alt="програміст працює за стoлом" width="370" height="294" />
             <div class="desq-label">
               <p class="desq-label__text">Десктопні додатки</p>
             </div>
           </li>
           <li class="card-list__items">
-            <img 
-            srcset="./img/what-are-we-doing-img-2.jpg 1x,
-            ./img/what-are-we-doing-img-2-2x.jpg 2x,"
-            src="./img/what-are-we-doing-img-2.jpg"
+            <img srcset="./img/what-are-we-doing-img-2.jpg 1x,
+            ./img/what-are-we-doing-img-2-2x.jpg 2x," src="./img/what-are-we-doing-img-2.jpg"
               alt="веб-інтерфейс дизайнери розробляють додаток смартфони команда творціd працює інтерфейс мобільні телефони"
               width="370" height="294" />
             <div class="desq-label">
@@ -206,10 +249,8 @@
             </div>
           </li>
           <li class="card-list__items">
-            <img 
-            srcset="./img/what-are-we-doing-img-3.jpg 1x,
-            ./img/what-are-we-doing-img-3-2x.jpg 2x,"
-            src="./img/what-are-we-doing-img-3.jpg"
+            <img srcset="./img/what-are-we-doing-img-3.jpg 1x,
+            ./img/what-are-we-doing-img-3-2x.jpg 2x," src="./img/what-are-we-doing-img-3.jpg"
               alt="креативний художник-веб-дизайн з робочим колір графічним планшетом" width="370" height="294" />
             <div class="desq-label">
               <p class="desq-label__text">
@@ -219,7 +260,7 @@
           </li>
         </ul>
       </div>
-    </section> 
+    </section>
 
     <section class="section our-team">
       <div class="container">
@@ -229,19 +270,15 @@
             <!-- test -->
 
             <picture>
-             <source srcset="./img/team-member-1-desk-1x.jpg 1x,
-             ./img/team-member-1-desk-2x.jpg 2x"
-             media ="(min-width:1200px)">
-            <source srcset="./img/team-member-1-tab-1x.jpg 1x,
-            ./img/team-member-1-tab-2x.jpg 2x"
-             media ="(min-width:768px)">
-             <source srcset="./img/team-member-1-mob-1x.jpg 1x,
-             ./img/team-member-1-mob-2x.jpg 2x"
-             media ="(min-width:480px)">
-             <img 
-            srcset="./img/team-member-1-mob-1x.jpg 1x,
-            ./img/team-member-1-mob-2x.jpg 2x"
-            src="./img/team-member-1-mob-1x.jpg"             alt="Ігор Дем'яненко Product Designer" width="270" height="260" />
+              <source srcset="./img/team-member-1-desk-1x.jpg 1x,
+             ./img/team-member-1-desk-2x.jpg 2x" media="(min-width:1200px)">
+              <source srcset="./img/team-member-1-tab-1x.jpg 1x,
+            ./img/team-member-1-tab-2x.jpg 2x" media="(min-width:768px)">
+              <source srcset="./img/team-member-1-mob-1x.jpg 1x,
+             ./img/team-member-1-mob-2x.jpg 2x" media="(min-width:480px)">
+              <img srcset="./img/team-member-1-mob-1x.jpg 1x,
+            ./img/team-member-1-mob-2x.jpg 2x" src="./img/team-member-1-mob-1x.jpg"
+                alt="Ігор Дем'яненко Product Designer" width="450" height="460" />
             </picture>
 
             <!-- test -->
@@ -283,19 +320,15 @@
           <li class="staff-list__item">
             <picture>
               <source srcset="./img/team-member-2-desk-1x.jpg 1x,
-              ./img/team-member-2-desk-2x.jpg 2x"
-              media ="(min-width:1200px)">
-             <source srcset="./img/team-member-2-tab-1x.jpg 1x,
-             ./img/team-member-2-tab-2x.jpg 2x"
-              media ="(min-width:768px)">
+              ./img/team-member-2-desk-2x.jpg 2x" media="(min-width:1200px)">
+              <source srcset="./img/team-member-2-tab-1x.jpg 1x,
+             ./img/team-member-2-tab-2x.jpg 2x" media="(min-width:768px)">
               <source srcset="./img/team-member-2-mob-1x.jpg 1x,
-              ./img/team-member-2-mob-2x.jpg 2x"
-              media ="(min-width:480px)">
-              <img 
-              srcset="./img/team-member-2-mob-1x.jpg 1x,
-              ./img/team-member-2-mob-2x.jpg 2x"
-              src="./img/team-member-2-mob-1x.jpg" alt="Ольга Рєпіна Frontend Developer" width="270" height="260" />
-             </picture>
+              ./img/team-member-2-mob-2x.jpg 2x" media="(min-width:480px)">
+              <img srcset="./img/team-member-2-mob-1x.jpg 1x,
+              ./img/team-member-2-mob-2x.jpg 2x" src="./img/team-member-2-mob-1x.jpg"
+                alt="Ольга Рєпіна Frontend Developer" width="450" height="460" />
+            </picture>
             <div class="staff-list__desq">
               <h3 class="staff-list__subtitle">Ольга Рєпіна</h3>
               <p class="staff-list__text">Frontend Developer</p>
@@ -332,22 +365,18 @@
             </div>
           </li>
           <li class="staff-list__item">
-    
+
             <picture>
               <source srcset="./img/team-member-3-desk-1x.jpg 1x,
-              ./img/team-member-3-desk-2x.jpg 2x"
-              media ="(min-width:1200px)">
-             <source srcset="./img/team-member-3-tab-1x.jpg 1x,
-             ./img/team-member-3-tab-2x.jpg 2x"
-              media ="(min-width:768px)">
+              ./img/team-member-3-desk-2x.jpg 2x" media="(min-width:1200px)">
+              <source srcset="./img/team-member-3-tab-1x.jpg 1x,
+             ./img/team-member-3-tab-2x.jpg 2x" media="(min-width:768px)">
               <source srcset="./img/team-member-3-mob-1x.jpg 1x,
-              ./img/team-member-3-mob-2x.jpg 2x"
-              media ="(min-width:480px)">
-              <img 
-              srcset="./img/team-member-3-mob-1x.jpg 1x,
-              ./img/team-member-3-mob-2x.jpg 2x"
-              src="./img/team-member-3.jpg" alt="Микола Тарасов Marketing" width="270" height="260" />
-             </picture>
+              ./img/team-member-3-mob-2x.jpg 2x" media="(min-width:480px)">
+              <img srcset="./img/team-member-3-mob-1x.jpg 1x,
+              ./img/team-member-3-mob-2x.jpg 2x" src="./img/team-member-3.jpg" alt="Микола Тарасов Marketing"
+                width="450" height="460" />
+            </picture>
             <div class="staff-list__desq">
               <h3 class="staff-list__subtitle">Микола Тарасов</h3>
               <p class="staff-list__text">Marketing</p>
@@ -387,19 +416,15 @@
 
             <picture>
               <source srcset="./img/team-member-4-desk-1x.jpg 1x,
-              ./img/team-member-4-desk-2x.jpg 2x"
-              media ="(min-width:1200px)">
-             <source srcset="./img/team-member-4-tab-1x.jpg 1x,
-             ./img/team-member-4-tab-2x.jpg 2x"
-              media ="(min-width:768px)">
+              ./img/team-member-4-desk-2x.jpg 2x" media="(min-width:1200px)">
+              <source srcset="./img/team-member-4-tab-1x.jpg 1x,
+             ./img/team-member-4-tab-2x.jpg 2x" media="(min-width:768px)">
               <source srcset="./img/team-member-4-mob-1x.jpg 1x,
-              ./img/team-member-4-mob-2x.jpg 2x"
-              media ="(min-width:480px)">
-              <img 
-             srcset="./img/team-member-4-mob-1x.jpg 1x,
-             ./img/team-member-4-mob-2x.jpg 2x"
-             src="./img/team-member-1-mob-1x.jpg"             alt="Ігор Дем'яненко Product Designer" width="270" height="260" />
-             </picture>
+              ./img/team-member-4-mob-2x.jpg 2x" media="(min-width:480px)">
+              <img srcset="./img/team-member-4-mob-1x.jpg 1x,
+             ./img/team-member-4-mob-2x.jpg 2x" src="./img/team-member-1-mob-1x.jpg"
+                alt="Ігор Дем'яненко Product Designer" width="450" height="460" />
+            </picture>
             <div class="staff-list__desq">
               <h3 class="staff-list__subtitle">Михайло Єрмаков</h3>
               <p class="staff-list__text">UI Designer</p>
@@ -439,7 +464,7 @@
       </div>
     </section>
   </main>
-<section class="section loyal-customers">
+  <section class="section loyal-customers">
     <div class="container">
       <p class="loyal-customers__title">Постійні клієнти</p>
       <ul class="clients list">
@@ -486,19 +511,20 @@
         </li>
       </ul>
     </div>
-  </section> 
- <footer>
+  </section>
+  <footer>
     <div class="container footer-main">
       <div class="footer-contacts">
         <a href="" class="logo footer-main__logo link">Web <span class="footer-main__span">Studio</span></a>
         <address>
           <ul class="address__nav list">
-            <li class="address__item" >
+            <li class="address__item">
               <a class="address__link link" href="https://goo.gl/maps/dssPtxW2memMisd88">м. Київ, пр-т Лесі
                 Українки, 26</a>
             </li class="address__item">
             <li class="address__item">
-              <a class="address__link link address__link-contacts" href="mailto:info@devstudio.com">info@devstudio.com</a>
+              <a class="address__link link address__link-contacts"
+                href="mailto:info@devstudio.com">info@devstudio.com</a>
             </li>
             <li>
               <a class="address__link link address__link-contacts" href="tel:+380961111111">+38 096 111 11 11</a>
@@ -554,11 +580,11 @@
         </form>
       </div>
     </div>
-  </footer> 
+  </footer>
 
   <script src="./js/modal.js"></script>
+  <script src="./menu.js"></script>
+
 </body>
 
 </html>
-
-<!-- test -->

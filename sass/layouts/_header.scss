@@ -4,12 +4,14 @@ header {
 
 .main-nav {
   // @include flex-align;
+  padding: 16px 0;
+  display: flex;
 
-  // &__logo {
-  //   @include font (26px, 700, 1.19, 0.03em);
-  //   font-family: var(--secondary-font);
-  //   color: var(--accent-color);
-  // }
+  &__logo {
+    @include font(24px, 700, 1.17, 0.03em);
+    font-family: var(--secondary-font);
+    color: var(--accent-color);
+  }
 
   &__span {
     font-family: var(--secondary-font);
@@ -17,19 +19,10 @@ header {
     margin-left: -7px;
   }
 
-  // @include tablet {
-  //   @media screen and (min-width: 768px) {
-  //     @include flex-align;
-  //     &__logo {
-  //       @include font (26px, 700, 1.19, 0.03em);
-  //       font-family: var(--secondary-font);
-  //       color: var(--accent-color);
-  //   }
-  // }
-  // }
   @include tablet {
     @media screen and (min-width: 768px) {
       @include flex-align;
+      padding: 0;
 
       &__logo {
         @include font(24px, 700, 1.16, 0.03em);
@@ -51,6 +44,22 @@ header {
   }
 }
 
+.navigation {
+  display: none;
+
+  @include tablet {
+    @media screen and (min-width: 768px) {
+      display: flex;
+    }
+  }
+
+  @include desktop {
+    @media screen and (min-width: 1200px) {
+      display: flex;
+    }
+  }
+}
+
 .navigation__list {
   // display: flex;
   // margin-left: 93px;
@@ -58,7 +67,7 @@ header {
   & .item {
     position: relative;
 
-    @mixin tablet {
+    @include tablet {
       @media screen and (min-width: 768px) {
         position: relative;
       }
@@ -122,7 +131,7 @@ header {
       position: relative;
       padding-top: 32px;
       padding-bottom: 32px;
-      @include font($fw: 500, $ls: 0.02em);
+      @include font($fs: 14px, $fw: 500, $lh: 1.17, $ls: 0.02em);
       color: var(--primary-header-color);
       transition: color 250ms var(--timing-function),
         transition 250ms var(--timing-function);
@@ -135,7 +144,7 @@ header {
       position: relative;
       padding-top: 32px;
       padding-bottom: 32px;
-      @include font($fw: 500, $ls: 0.02em);
+      @include font($fs: 14px, $fw: 500, $lh: 1.17, $ls: 0.02em);
       color: var(--primary-header-color);
       transition: color 250ms var(--timing-function),
         transition 250ms var(--timing-function);
@@ -177,7 +186,7 @@ header {
 
   @include tablet {
     @media screen and (min-width: 768px) {
-      content: '';
+      content: "";
       display: block;
       position: absolute;
       background: var(--accent-color);
@@ -196,7 +205,7 @@ header {
 
   @include desktop {
     @media screen and (min-width: 1200px) {
-      content: '';
+      content: "";
       display: block;
       position: absolute;
       background: var(--accent-color);
@@ -212,16 +221,26 @@ header {
       opacity: 1;
     }
   }
-
 }
 
 .connections-list {
-  // display: flex;
+  display: none;
   // margin-left: auto;
 
   // & > li {
   //   margin-left: 40px;
   // }
+
+  @include tablet {
+    @media screen and (min-width: 768px) {
+      display: inline-block;
+      margin-left: auto;
+
+      & > li {
+        margin-left: 40px;
+      }
+    }
+  }
 
   @include desktop {
     @media screen and (min-width: 1200px) {
@@ -290,6 +309,20 @@ header {
   }
 }
 
+.connections-list__email {
+  @include tablet {
+    @media screen and (min-width: 768px) {
+      margin-bottom: 10px;
+    }
+  }
+
+  @include desktop {
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 10px;
+    }
+  }
+}
+
 .connections-list__email:focus,
 .connections-list__email:hover {
   // color: var(--accent-color);
@@ -317,7 +350,6 @@ header {
     @media screen and (min-width: 768px) {
       fill: currentColor;
       margin-right: 8px;
-
     }
   }
 
@@ -328,4 +360,157 @@ header {
       display: inline-flex;
     }
   }
+}
+
+.mail-icon {
+  @include desktop {
+    @media screen and (min-width: 1200px) {
+      width: 16px;
+      height: 12px;
+    }
+  }
+}
+
+.phone-icon {
+  @include desktop {
+    @media screen and (min-width: 1200px) {
+      width: 10px;
+      height: 16px;
+    }
+  }
+}
+
+.menu-open {
+  margin-left: auto;
+
+  @include tablet {
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
+  }
+
+  @include desktop {
+    @media screen and (min-width: 1200px) {
+      display: none;
+    }
+  }
+}
+
+
+
+.mobile-menu {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  transform: left 250ms, visibility 250ms;
+  
+  & .container {
+    display: block;
+    height: 100%;
+  }
+
+  .is-hidden {
+    left: -1000px;
+    right: auto;
+  }
+}
+
+
+
+
+.mob-navigation__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.mob-navigation__link {
+  @include font($fs: 40px, $fw: 500, $lh: 1.17, $ls: 0.02em);
+  color: var(--primary-header-color);
+  transition: color 250ms var(--timing-function);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+
+.mob-navigation__link.current {
+  color: var(--accent-color);
+}
+
+.mob-connections-list__email,
+.mob-connections-list__tel {
+  @include font($fs: 24px, $fw: 500, $lh: 1.16, $ls: 0.02em);
+  color: var(--secondary-color);
+  transition: color 250ms var(--timing-function);
+
+  &:focus,
+  &:hover {
+    color: var(--accent-color);
+  }
+}
+
+.mob-social-link__link {
+  @include font($fs: 18px, $fw: 500, $lh: 1.22, $ls: 0.02em);
+  color: var(--accent-color);
+}
+
+.mob-connections {
+  margin-bottom: 64px;
+}
+
+.mob-connections-list__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.mob-social-link-list {
+  display: flex;
+  // position: relative;
+  gap: 20px;
+}
+
+.mob-social-link__item::after {
+  content: "";
+  width: 22px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  transform: rotate(90deg);
+  margin-left: 10px;
+
+  &.after:hover::after {
+    opacity: 1;
+  }
+}
+
+.menu-content {
+  padding: 48px 0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-between;
+}
+
+.menu-close {
+  display: block;
+  margin-left: auto;
+  margin-right: 0;
+}
+
+
+.menu-close {
+  // position: relative;
+  // align-items: center;
+  // justify-content: center;
+  cursor: pointer;
+  border: none;
+  width: 18.67px;
+  height: 18.67px;
+  background: white;
+  transition: fill 250ms var(--timing-function);
+}
+
+.menu-close:hover {
+  fill: var(--accent-color);
 }
