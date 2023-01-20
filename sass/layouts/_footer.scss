@@ -123,4 +123,13 @@ footer {
       text-align: start;
     }
   }
+
+  .signup {
+    text-align: center;
+    @include desktop {
+      @media screen and (min-width: 1200px) {
+        text-align: start;
+      }
+    }
+}
 }

@@ -515,6 +515,18 @@ header {
   border: none;
   background: white;
   transition: fill 250ms var(--timing-function);
+
+  @include tablet {
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
+  }
+
+  @include desktop {
+    @media screen and (min-width: 1200px) {
+     display: none;
+    }
+  }
 }
 
 .js-open-menu {

@@ -121,6 +121,7 @@
   line-height: 1.25;
   transition: border 250ms var(--timing-function);
 
+
   &:focus,
   &:hover {
     border-color: var(--accent-color);
@@ -129,7 +130,7 @@
 
   @include tablet {
     @media screen and (min-width: 768px) {
-      max-width: 450px;
+      width: 450px;
       margin-bottom: 30px;
     }
   }
@@ -147,16 +148,16 @@
 }
 
 .signup__button {
-  // position: absolute;
-  display: inline-flex;
+  // display: flex;
+  position: relative;
+  justify-content: center;
   gap: 5%;
-  @include justify-align;
   min-width: 200px;
   border-radius: 4px;
   border: none;
   overflow: hidden;
   padding: 10px 62px 10px 28px;
-  // margin-left: 12px;
+  margin-left: 12px;
   background: var(--accent-color);
   color: #ffffff;
   transition: background-color 250ms var(--timing-function);
@@ -169,15 +170,17 @@
   @include desktop {
     @media screen and (min-width: 1200px) {
       margin-left: 12px;
+      display: flex;
     }
   }
 }
 
+
 .signup__icon {
-  // position: absolute;
   fill: white;
   top: 13px;
   right: 28px;
+  position: absolute;
 }
 
 .signup__field {
@@ -189,21 +192,25 @@
   }
 }
 
-// .signup__form{
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-// }
 
-
-.signup__form {
-  display: flex;
-  // flex-direction: column;
-  // align-items: center;
-}
-
-.signup__field{
+.signup {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
+
+  @include tablet {
+    @media screen and (min-width: 768px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  @include desktop {
+    @media screen and (min-width: 1200px) {
+      align-items: start;
+    }
+  }
 }
