@@ -46,21 +46,25 @@
           </li>
           <li>
             <a href="tel:+380961111111" class="connections-list__tel link">
-              <svg width="10" height="14" class="connections-list__icon phone-icon">
+              <svg width="40" height="40" class="connections-list__icon phone-icon">
                 <use href="./img/icons-icomoon.svg#icon-phone-icon"></use>
               </svg>+38 096 111 11 11</a>
           </li>
         </ul>
         <!-- Mob menu -->
       </div>
-      <button type="button" class="menu-open">M</button>
+      <button type="button" class="menu-toggle js-open-menu">
+        <svg class="menu-toogle__icon" width="40" height="40">
+          <use href="./img/icons-icomoon.svg#icon-open-button-icon"></use>
+        </svg>
+      </button>
     </div>
-    <div class="mobile-menu">
+    <div class="mobile-menu js-menu-container is-open" id="mobile-menu">
       <div class="container">
         <div class="menu-content">
-          <button type="button" class="menu-close">X
-            <svg class="" width="18.67" height="18.67">
-              <use href="./img/close_40px.svg"></use>
+          <button type="button" class="menu-toggle js-close-menu">
+            <svg class="menu-toogle__icon" width="40" height="40">
+              <use href="./img/icons-icomoon.svg#icon-close-button-icon"></use>
             </svg>
           </button>
           <nav class="mob-navigation">
@@ -101,6 +105,7 @@
       </div>
     </div>
   </header>
+
 
   <main>
     <section class="hero">
@@ -186,9 +191,12 @@
       <div class="container">
         <ul class="characteristics__list list">
           <li class="characteristics__item">
-            <svg class="characteristics__icon" width="65" height="70">
-              <use href="./img/icons-icomoon.svg#icon-attention-to-details-icon"></use>
-            </svg>
+            <div class="characteristics__img">
+              <svg class="characteristics__icon" width="65" height="70">
+                <use href="./img/icons-icomoon.svg#icon-attention-to-details-icon"></use>
+              </svg>
+            </div>
+
             <h3 class="characteristics__subtitle">УВАГА ДО ДЕТАЛЕЙ</h3>
             <p class="characteristics__text">
               Ідейні міркування, і навіть початок повсякденної роботи з
@@ -196,9 +204,11 @@
             </p>
           </li>
           <li class="characteristics__item">
-            <svg class="characteristics__icon" width="65" height="70">
-              <use href="./img/icons-icomoon.svg#icon-clock-1"></use>
-            </svg>
+            <div class="characteristics__img">
+              <svg class="characteristics__icon" width="65" height="70">
+                <use href="./img/icons-icomoon.svg#icon-clock-1"></use>
+              </svg>
+            </div>
             <h3 class="characteristics__subtitle">ПУНКТУАЛЬНІСТЬ</h3>
             <p class="characteristics__text">
               Завдання організації, особливо рамки і місце навчання кадрів
@@ -206,18 +216,22 @@
             </p>
           </li>
           <li class="characteristics__item">
-            <svg class="characteristics__icon" width="65" height="70">
-              <use href="./img/icons-icomoon.svg#icon-diagram-1"></use>
-            </svg>
+            <div class="characteristics__img">
+              <svg class="characteristics__icon" width="65" height="70">
+                <use href="./img/icons-icomoon.svg#icon-diagram-1"></use>
+              </svg>
+            </div>
             <h3 class="characteristics__subtitle">ПЛАНУВАННЯ</h3>
             <p class="characteristics__text">
               Так само консультація з широким активом значною мірою зумовлює.
             </p>
           </li>
           <li class="characteristics__item">
-            <svg class="characteristics__icon" width="65" height="70">
-              <use href="./img/icons-icomoon.svg#icon-astronaut"></use>
-            </svg>
+            <div class="characteristics__img">
+              <svg class="characteristics__icon" width="65" height="70">
+                <use href="./img/icons-icomoon.svg#icon-astronaut"></use>
+              </svg>
+            </div>
             <h3 class="characteristics__subtitle">СУЧАСНІ ТЕХНОЛОГІЇ</h3>
             <p class="characteristics__text">
               Значимість цих проблем настільки очевидна, що реалізація
@@ -583,7 +597,7 @@
   </footer>
 
   <script src="./js/modal.js"></script>
-  <script src="./menu.js"></script>
+  <script src="./js/mobile-menu.js"></script>
 
 </body>
 

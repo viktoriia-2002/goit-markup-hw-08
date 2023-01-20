@@ -449,7 +449,7 @@ header {
   }
 }
 
-.mobile-menu {
+.mobile-menu .js-container {
   position: fixed;
   width: 100vw;
   height: 100vh;
@@ -457,15 +457,14 @@ header {
   top: 0px;
   left: 0px;
   right: 0px;
-  transform: left 250ms, visibility 250ms;
+  transform: translateX(100%);
 }
-.mobile-menu .container {
+.mobile-menu .js-container .container {
   display: block;
   height: 100%;
 }
-.mobile-menu .is-hidden {
-  left: -1000px;
-  right: auto;
+.mobile-menu .js-container .is-open {
+  transform: translateX(0);
 }
 
 .mob-navigation__item:not(:last-child) {
@@ -543,23 +542,44 @@ header {
   justify-content: space-between;
 }
 
-.menu-close {
+.js-close-menu {
   display: block;
   margin-left: auto;
   margin-right: 0;
 }
 
-.menu-close {
+.js-close-menu {
   cursor: pointer;
   border: none;
-  width: 18.67px;
-  height: 18.67px;
   background: white;
   transition: fill 250ms var(--timing-function);
 }
 
-.menu-close:hover {
+.js-close-menu {
   fill: var(--accent-color);
+}
+
+.js-open-menu {
+  cursor: pointer;
+  border: none;
+  background: white;
+  transition: fill 250ms var(--timing-function);
+}
+
+.js-open-menu {
+  fill: var(--primary-header-color);
+}
+
+.js-open-menu:hover {
+  fill: var(--accent-color);
+}
+
+.mobile-menu .js-menu-container {
+  position: absolute;
+}
+
+.menu-toggle .js-open-menu {
+  position: absolute;
 }
 
 .hero {
@@ -1232,7 +1252,7 @@ form {
 }
 @media screen and (min-width: 480px) {
   .characteristics .characteristics__item {
-    width: 480px;
+    width: calc((100% - 30px) / 1);
   }
 }
 @media screen and (min-width: 768px) {
@@ -1966,7 +1986,6 @@ footer:hover, footer:focus {
 .signup__input {
   margin: 0;
   margin-bottom: 20px;
-  max-width: 450px;
   width: 100%;
   height: 50px;
   padding: 15px 0px 15px 16px;
@@ -2034,4 +2053,10 @@ footer:hover, footer:focus {
     display: flex;
     align-items: center;
   }
+}
+
+.signup__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }/*# sourceMappingURL=main.css.map */

@@ -396,9 +396,7 @@ header {
   }
 }
 
-
-
-.mobile-menu {
+.mobile-menu .js-container {
   position: fixed;
   width: 100vw;
   height: 100vh;
@@ -406,21 +404,17 @@ header {
   top: 0px;
   left: 0px;
   right: 0px;
-  transform: left 250ms, visibility 250ms;
-  
+  transform: translateX(100%);
+
   & .container {
     display: block;
     height: 100%;
   }
 
-  .is-hidden {
-    left: -1000px;
-    right: auto;
+  & .is-open {
+    transform: translateX(0);
   }
 }
-
-
-
 
 .mob-navigation__item:not(:last-child) {
   margin-bottom: 32px;
@@ -492,25 +486,45 @@ header {
   justify-content: space-between;
 }
 
-.menu-close {
+.js-close-menu {
   display: block;
   margin-left: auto;
   margin-right: 0;
 }
 
-
-.menu-close {
+.js-close-menu {
   // position: relative;
   // align-items: center;
   // justify-content: center;
   cursor: pointer;
   border: none;
-  width: 18.67px;
-  height: 18.67px;
   background: white;
   transition: fill 250ms var(--timing-function);
 }
 
-.menu-close:hover {
+.js-close-menu {
   fill: var(--accent-color);
+}
+
+.js-open-menu {
+  cursor: pointer;
+  border: none;
+  background: white;
+  transition: fill 250ms var(--timing-function);
+}
+
+.js-open-menu {
+  fill: var(--primary-header-color);
+}
+
+.js-open-menu:hover {
+  fill: var(--accent-color);
+}
+
+.mobile-menu .js-menu-container {
+  position: absolute;
+}
+
+.menu-toggle .js-open-menu {
+  position: absolute;
 }
