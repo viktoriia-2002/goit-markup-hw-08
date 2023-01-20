@@ -396,22 +396,23 @@ header {
   }
 }
 
-.mobile-menu .js-container {
+.mobile-menu {
   position: fixed;
+  top: 0;
+  left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: #fff;
-  top: 0px;
-  left: 0px;
-  right: 0px;
+  padding: 32px;
+  background-color: white;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+
   transform: translateX(100%);
+  transition: transform 250ms ease-in-out;
 
-  & .container {
-    display: block;
-    height: 100%;
-  }
-
-  & .is-open {
+  &.is-open {
     transform: translateX(0);
   }
 }
@@ -487,15 +488,10 @@ header {
 }
 
 .js-close-menu {
-  display: block;
-  margin-left: auto;
-  margin-right: 0;
-}
+  position: absolute;
+  top: 15px;
+  right: 15px;
 
-.js-close-menu {
-  // position: relative;
-  // align-items: center;
-  // justify-content: center;
   cursor: pointer;
   border: none;
   background: white;
@@ -503,10 +499,18 @@ header {
 }
 
 .js-close-menu {
+  fill: var(--primary-header-color);
+}
+
+.js-close-menu:hover {
   fill: var(--accent-color);
 }
 
 .js-open-menu {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+
   cursor: pointer;
   border: none;
   background: white;
@@ -525,6 +529,16 @@ header {
   position: absolute;
 }
 
-.menu-toggle .js-open-menu {
-  position: absolute;
+// .menu-toggle .js-open-menu {
+//   position: absolute;
+// }
+
+.button-toggle {
+  margin-left: auto;
+  padding: 0;
+}
+
+.menu-toogle__icon {
+  width: 30px;
+  height: 30px;
 }
