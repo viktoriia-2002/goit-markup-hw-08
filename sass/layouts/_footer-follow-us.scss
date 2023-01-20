@@ -189,7 +189,20 @@
   }
 }
 
-.signup__form{
+// .signup__form{
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+// }
+
+
+.signup__form {
+  display: flex;
+  // flex-direction: column;
+  // align-items: center;
+}
+
+.signup__field{
   display: flex;
   flex-direction: column;
   align-items: center;

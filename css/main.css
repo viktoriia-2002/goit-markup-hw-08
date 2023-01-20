@@ -1239,8 +1239,7 @@ form {
   }
 }
 .characteristics .characteristics__list {
-  display: flex;
-  flex-wrap: wrap;
+  display: block;
 }
 @media screen and (min-width: 480px) {
   .characteristics .characteristics__list {
@@ -1326,6 +1325,14 @@ form {
     flex-wrap: nowrap;
     width: 270px;
   }
+}
+
+.characteristics__img {
+  display: flex;
+  background-color: #f5f4fa;
+  border-radius: 4px;
+  height: 132px;
+  margin-bottom: 30px;
 }
 
 .our-business {
@@ -2067,6 +2074,10 @@ footer:hover, footer:focus {
 }
 
 .signup__form {
+  display: flex;
+}
+
+.signup__field {
   display: flex;
   flex-direction: column;
   align-items: center;
