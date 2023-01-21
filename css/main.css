@@ -1485,7 +1485,6 @@ form {
 
 .staff-list__item {
   flex-basis: 100%;
-  margin-bottom: 30px;
   text-align: center;
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -1494,6 +1493,7 @@ form {
 @media screen and (min-width: 480px) {
   .staff-list__item {
     display: block;
+    margin-bottom: 30px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -1527,7 +1527,7 @@ form {
 
 @media screen and (min-width: 768px) {
   .staff-list__item:nth-child(even) {
-    margin-right: 0px;
+    margin-bottom: 0px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1536,15 +1536,15 @@ form {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (min-width: 768px) {
   .staff-list__item:nth-last-child(-n+2) {
     margin-bottom: 0px;
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) and (min-width: 1200px) {
   .staff-list__item:nth-last-child(-n+2) {
-    margin-bottom: 30px;
+    margin-bottom: 0px;
   }
 }
 
