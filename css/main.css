@@ -1499,7 +1499,7 @@ form {
 }
 @media screen and (min-width: 768px) {
   .staff-list__item {
-    flex-basis: calc((100% - 60px) / 2);
+    flex-basis: calc((100% - 30px) / 2);
     margin-bottom: 30px;
     margin-right: 30px;
   }
@@ -1649,7 +1649,7 @@ form {
 }
 
 .clients__items {
-  flex-basis: calc((100% - 60px) / 2);
+  flex-basis: calc((100% - 30px) / 2);
 }
 .clients__items:hover .clients__icons, .clients__items:focus .clients__icons {
   fill: var(--accent-color);
